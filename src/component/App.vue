@@ -1,16 +1,17 @@
-<template id="app">
-    <div>测试环境</div>
+<template>
+    <div>
+        测试环境
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
-    export default{
-        name:'app'
+    export default {
+        // name:'app'
+       
     }
 </script>
 
 <style scoped>
-#app{
-    color: red;
-}
-</style>
 
+</style>
