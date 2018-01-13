@@ -7,6 +7,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 // 初始化默认样式
 import 'normalize.css';
+import './less/index.less';
 Vue.use(ElementUI);
 import axios from 'axios';
 import api from './js/api_config.js';
