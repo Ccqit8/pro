@@ -2,6 +2,11 @@ import Vue from 'vue';
 
 // 导入 根组件
 import App from './component/App.vue';
+// element-ui插件的引入 和样式
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI);
 import axios from 'axios';
 import api from './js/api_config.js';
 // 一配置, 以后所有的请求就会自动使用这个域名

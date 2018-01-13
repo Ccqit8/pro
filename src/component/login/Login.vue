@@ -2,12 +2,10 @@
     <div>登录页面</div>
 </template>
 <script>
-    var axios=require('axios');
-  
     export default {
       
         created(){
-            this.$http.get(this.$api.login).then(res=>{
+            this.$http.get(this.$api.islogin).then(res=>{
                 console.log(res.data);
             })
         }
