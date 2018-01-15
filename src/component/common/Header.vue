@@ -31,5 +31,6 @@
         padding-right: 30px;
         display: block;
         text-align: right;
+        line-height: 60px;
     }
 </style>

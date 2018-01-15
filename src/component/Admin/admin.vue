@@ -7,7 +7,7 @@
             <el-header>
                 <Header></Header>
             </el-header>
-            <el-main>Main</el-main>
+            <el-main>main<router-view></router-view></el-main>
         </el-container>
     </el-container>
 </template>
@@ -27,21 +27,18 @@
         background-color: #B3C0D1;
         color: #333;
         text-align: center;
-        line-height: 60px;
     }
 
     .el-aside {
         background-color: #D3DCE6;
         color: #333;
         text-align: center;
-        line-height: 200px;
     }
 
     .el-main {
         background-color: #E9EEF3;
         color: #333;
         text-align: center;
-        line-height: 160px;
     }
     .el-container{
         height: 100%;

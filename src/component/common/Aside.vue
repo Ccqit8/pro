@@ -1,5 +1,5 @@
 <template>
-        <el-menu  class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
+        <el-menu  class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" background-color="#267cb7" text-color="#fff">
             <el-submenu :index="item.title" v-for='item in category' :key='item.title'>
                 <template slot="title">
                     <i class="el-icon-d-caret"></i>
@@ -71,5 +71,8 @@
 </script>
 
 <style scoped>
-
+.el-menu:hover{
+    /* background-color: #267cb7; */
+    background-color: #20a0ff; 
+}
 </style>
