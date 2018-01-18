@@ -7,7 +7,7 @@
             <el-header>
                 <Header></Header>
             </el-header>
-            <el-main>main<router-view></router-view></el-main>
+            <el-main><router-view></router-view></el-main>
         </el-container>
     </el-container>
 </template>
@@ -38,7 +38,6 @@
     .el-main {
         background-color: #E9EEF3;
         color: #333;
-        text-align: center;
     }
     .el-container{
         height: 100%;

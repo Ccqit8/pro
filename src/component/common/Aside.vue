@@ -7,8 +7,7 @@
                 </template>
                     <el-menu-item :index="citem.title" v-for='citem in item.children' :key='citem.title'>
                             <router-link :to="citem.path">{{citem.title}}</router-link>
-                    </el-menu-item>
-                   
+                    </el-menu-item> 
             </el-submenu>
         </el-menu>
 </template>
@@ -18,15 +17,15 @@
             return{
                category:[
                    {
-                       title:'资源下载',
+                       title:'产品管理',
                        children:[
                            {
-                               title:'内容管理',
-                               path:'/a'
+                               title:'内容列表',
+                               path:'/admin/goods/category/list'
                            },
                            {
                                title:'内容分类',
-                               path:'/b'
+                               path:'/admin/goods/category/list'
                            }
                        ]
                    },
@@ -35,11 +34,11 @@
                        children:[
                            {
                                title:'内容管理',
-                               path:'/a'
+                               path:'/admin/goods/category/list'
                            },
                            {
                                title:'内容分类',
-                               path:'/b'
+                               path:'/admin/goods/category/list'
                            }
                        ]
                    },
@@ -48,11 +47,11 @@
                        children:[
                            {
                                title:'内容管理',
-                               path:'/a'
+                               path:'/admin/goods/category/list'
                            },
                            {
                                title:'内容分类',
-                               path:'/b'
+                               path:'/admin/goods/category/list'
                            }
                        ]
                    }
@@ -74,5 +73,11 @@
 .el-menu:hover{
     /* background-color: #267cb7; */
     background-color: #20a0ff; 
+}
+.el-menu{
+    height:100%;
+}
+a{
+    text-decoration: none;
 }
 </style>

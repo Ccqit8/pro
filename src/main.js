@@ -12,7 +12,8 @@ Vue.use(ElementUI);
 import axios from 'axios';
 import api from './js/api_config.js';
 // 一配置, 以后所有的请求就会自动使用这个域名
-axios.defaults.baseURL='http://157.122.54.189:9095';
+axios.defaults.baseURL='http://localhost:8899';
+axios.defaults.withCredentials=true;
 Vue.prototype.$http=axios;
 Vue.prototype.$api=api;
 // 导入 vue-router 
@@ -21,11 +22,13 @@ Vue.use(VueRouter);
 
 // 导入 vue-router 的 路由配置
 import routerConfig from './router/index.js';
+import beforeEach from './router/beforeEach.js';
 
-// console.log(routerConfig);
+let router=new VueRouter(routerConfig);
+router.beforeEach(beforeEach);
 new Vue({
     el: "#app",
-    router: new VueRouter(routerConfig),
+    router:router,
     render: function (createElement) {
         return createElement(App);
     },

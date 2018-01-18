@@ -55,17 +55,24 @@
             }
         },
         methods: {
-            login(){
-                
-                    this.$http.post(this.$api.login,this.ruleForm2).then(res=>{
-                        if(res.data.status==0){
-                            this.$alert('登录成功');
-                            this.$router.push({name:'admin',path:'/admin'});
-                        }else if(res.data.status==1){
-                            this.$alert(res.data.message);
-                        }
-                    })
-                },
+            login() {
+
+                this.$http.post(this.$api.login, this.ruleForm2).then(res => {
+                    if (res.data.status == 0) {
+                        this.$alert('登录成功');
+                        // console.log(111);
+                        var nextPage = this.$route.query.nextPage;
+                        // nextPage=='login'?nextPage='/login':nextPage;
+                        // this.$router.push(nextPage);
+                        this.$router.push({
+                            path: nextPage ? nextPage : '/admin'
+                        });
+                        // console.log(nextPage);
+                    } else if (res.data.status == 1) {
+                        this.$alert(res.data.message);
+                    }
+                })
+            },
             submitForm(formName) {
                 this.$refs[formName].validate((valid) => {
                     if (valid) {

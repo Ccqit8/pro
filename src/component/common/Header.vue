@@ -19,7 +19,9 @@
         },
         methods:{
             loginOut(){
-                console.log(111);
+                this.$http.get(this.$api.logout).then(res=>{
+                   
+                })
                 this.$router.push({name:'login',path:'/login'});
             }
         }
